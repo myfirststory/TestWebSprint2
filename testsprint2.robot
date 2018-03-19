@@ -81,6 +81,7 @@ openbrow
     Input Text    ans3    kho chang
     click Checkbox    accept
     click button    submit
+*** comment ***
 ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement ชื่อผิดรูปแบบ
 ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement เลขปชช.ผิดรูปแบบ
 ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement เลขพาสพอร์ตผิดรูปแบบ

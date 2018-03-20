@@ -38,11 +38,11 @@ register-validRegist
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegist-thaiusername
     Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_ssn}
+    Input Text    name    Jidapa pattanang
+    Input Text    ssn    1449900426318
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    เทพนักเลี้ยงหมา1123
+    Input Text    email    jidapa@kkumail.com
+    Input Text    username    เทพนักเลี้ยงหมา6318
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
@@ -58,11 +58,11 @@ register-validRegist-thaiusername
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    Input Text    name    tania Britanien
     Input Text    ssn    ${valid_passportNo}
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    ${valid_username}
+    Input Text    email    tannia@kkumail.com
+    Input Text    username    IamFormBritanien
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
@@ -78,11 +78,11 @@ register-validRegistUsingPassportNo.
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.-thaiusername
     Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_passportNo}
+    Input Text    name    Sumail fromeg
+    Input Text    ssn    MD1124541
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    เทพนักเลี้ยงหมา1123
+    Input Text    email    sumail@kkumail.com
+    Input Text    username    ซุเมลแห่งอีจี
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
@@ -98,10 +98,10 @@ register-validRegistUsingPassportNo.-thaiusername
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegist-LongUsername
     Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_ssn}
+    Input Text    name    lakelz numbaone
+    Input Text    ssn    1440200154221
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
+    Input Text    email    lakelz@kkumail.com
     Input Text    username    SoWhatAboutMyLifeThatSuckAsHellWhoWillTakeRespond
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
@@ -118,11 +118,11 @@ register-validRegist-LongUsername
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.-LongUsername
     Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_passportNo}
+    Input Text    name    iceiceice mnskison
+    Input Text    ssn    OF1125541
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    SoWhatAboutMyLifeThatSuckAsHellWhoWillTakeRespond
+    Input Text    email    iceiceice@kkumail.com
+    Input Text    username    ILikeLakelzLakelzNumbaOne
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
@@ -138,11 +138,11 @@ register-validRegistUsingPassportNo.-LongUsername
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegist-thaiusername-LongUsername
     Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_ssn}
+    Input Text    name    Simon Dominic
+    Input Text    ssn    1359900221554
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    แม้ว่าวันนี้เธอจะอยุ่แสนไกลแต่ความทรงจำไม่เคยจาง
+    Input Text    email    sumd@kkumail.com
+    Input Text    username    เราเองนายไซมอน
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
@@ -158,11 +158,11 @@ register-validRegist-thaiusername-LongUsername
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.-thaiusername-LongUsername
     Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_passportNo}
+    Input Text    name    Arteezy fromwhere
+    Input Text    ssn    CR1124541
     Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    แม้ว่าวันนี้เธอจะอยุ่แสนไกลแต่ความทรงจำไม่เคยจาง
+    Input Text    email    rtzthebbrage@kkumail.com
+    Input Text    username    นายอาร์ทีซีเดอะเบบี้เรจ
     Input password    password    ${valid_password}
     Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997

@@ -17,24 +17,45 @@ openbrow
 OpenBrowserChrome
     openbrow
 register-validRegist
-   Go to    ${url}
-   Input Text    name    ${valid_name}
-   Input Text    ssn    ${valid_ssn}
-   Choose File    imgSSN    ${curdir}/tester.jpg
-   Input Text    email    s.thanu@kkumail.com
-   Input Text    username    ${valid_username}
-   Input password    password    ${valid_password}
-   Input password    confirmpassword    ${valid_password}
-   Input Text    birthday    01/04/1997
-   Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
-   Input Text    ans1    me. I mean myself, Really
-   Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
-   Input Text    ans2    game tester
-   Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
-   Input Text    ans3    kho chang
-   click Checkbox    accept
-   Click button    ok
-   click button    Register
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-validRegist-thaiusername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    เทพนักเลี้ยงหมา1123
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -54,23 +75,148 @@ register-validRegistUsingPassportNo.
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-validRegistUsingPassportNo.-thaiusername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_passportNo}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    เทพนักเลี้ยงหมา1123
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of firth beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-validRegist-LongUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    SoWhatAboutMyLifeThatSuckAsHellWhoWillTakeRespond
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-validRegistUsingPassportNo.-LongUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_passportNo}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    SoWhatAboutMyLifeThatSuckAsHellWhoWillTakeRespond
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of firth beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-validRegist-thaiusername-LongUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    แม้ว่าวันนี้เธอจะอยุ่แสนไกลแต่ความทรงจำไม่เคยจาง
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-validRegistUsingPassportNo.-thaiusername-LongUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_passportNo}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    แม้ว่าวันนี้เธอจะอยุ่แสนไกลแต่ความทรงจำไม่เคยจาง
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of firth beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
+register-invalidRegist-allBlank
+    Go to    ${url}
+    Input Text    name    \\32
+    Input Text    ssn    \\32
+    Input Text    email    \\32
+    Input Text    username    \\32
+    Input password    password    \\32
+    Input password    confirmpassword    \\32
+    Input Text    birthday    01/04/1997
+    Input Text    ans1    \\32
+    Input Text    ans2    \\32
+    Input Text    ans3    \\32
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
 register-invalidRegist-noPolicy
-   Go to    ${url}
-   Input Text    name    ${valid_name}
-   Input Text    ssn    ${valid_ssn}
-   Choose File    imgSSN    ${curdir}/tester.jpg
-   Input Text    email    s.thanu@kkumail.com
-   Input Text    username    ${valid_username}
-   Input password    password    ${valid_password}
-   Input password    confirmpassword    ${valid_password}
-   Input Text    birthday    01/04/1997
-   Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
-   Input Text    ans1    me. I mean myself, Really
-   Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
-   Input Text    ans2    game tester
-   Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
-   Input Text    ans3    kho chang
-   click button    Register
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click button    Register
+    Wait until page contains    Please accept the policy to sign up
 register-invalidRegist-2-noPolicy
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -88,14 +234,32 @@ register-invalidRegist-2-noPolicy
     Select From List By Label    xpath=//select[@name="question3"]    What is the name of firth beach you visited?
     Input Text    ans3    kho chang
     click button    Register
+    Wait until page contains    Please accept the policy to sign up
 register-invalidRegist-allEmpty-checkPolicy
     Go to ${url}
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
 regsiter-invalidRegist-allEmpty-notCheckPolicy
     Go to ${url}
     Click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please accept the policy to sign up
 register-invalidRegist-name-thaiName-1
     Go to    ${url}
     Input Text    name    ธนู แสไธสง
@@ -450,6 +614,7 @@ register-invalidRegist-noImages
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Image must be .png .jpg .jpeg format
 register-invalidRegist-notInputImages
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -469,6 +634,7 @@ register-invalidRegist-notInputImages
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Image must be .png .jpg .jpeg format
 register-invalidRegist-noEmail
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -487,6 +653,7 @@ register-invalidRegist-noEmail
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
 register-invalidRegist-invalidPatternEmail-No@
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -506,6 +673,7 @@ register-invalidRegist-invalidPatternEmail-No@
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
 register-invalidRegist-invalidPatternEmail-NoDomain
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -525,6 +693,7 @@ register-invalidRegist-invalidPatternEmail-NoDomain
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
 register-invalidRegist-invalidPatternEmail-thaiEmail
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -544,6 +713,7 @@ register-invalidRegist-invalidPatternEmail-thaiEmail
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
 register-invalidRegist-invalidPatternEmail-Blank
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -563,6 +733,7 @@ register-invalidRegist-invalidPatternEmail-Blank
     click Checkbox    accept
     Click button    ok
     click button    Register
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
 register-invalidRegist-invalidPatternEmail-wrongAlphabet
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -582,15 +753,464 @@ register-invalidRegist-invalidPatternEmail-wrongAlphabet
     click Checkbox    accept
     Click button    ok
     click button    Register
-register-invalidRegist-nameAndSSN-Only
-   Go to    ${url}
-   Input Text    name    ${valid_name}
-   Input Text    ssn    ${valid_ssn}
-   click Checkbox    accept
-   Click button    ok
-   click button    Register
-   Wait until page contains    Incorrect pattern
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username ไม่ใส่
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username ช่องว่าง
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username อักขระพิเศษ
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username อักขระพิเศษ
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+register-invalidRegist-noUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-blankUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Press key    username    \\32
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-longBlankUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Press key    username    \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32 \\32
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-wrongUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    **NineInch009
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-LongUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    TomorrowIWillDateYesterdayYouSoItGonnaBeLikeFiveCentimeterPerSecondVibeMovieOuchItSoHurt
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-LongUsername-specialCharOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ----------------------------------------------------------------------------------
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-LongUsername-specialCharOnly2
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ___________________________________________________________________________________
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-LongUsername-specialCharOnly3
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ********************************************************************************
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-LongUsername-thaiUsername
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    พรุ่งนี้ฉันจะรักเธอคนเมื่อวานแล้วมันจะมีความรู้สึกเหมือนหนังเรื่องยามซากุระร่วงโรยโอ๊ยเจ็บจริง
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-shortUsername-specialCharOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    *
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+register-invalidRegist-noPassword
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+register-invalidRegist-longPassword
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    BIGBIGBIGLBIGIBIGMsoItgonnabeLIkethIsIntextonLydonottooworryIMMaforgetItaxetuaLLy
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+register-invalidRegist-shortPassword
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    1122
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+register-invalidRegist-shortWrongPasswordPattern
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ************
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+register-invalidRegist-longWrongPasswordPattern
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ****************************************************************************
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+register-invalidRegist-noBirthDay
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please input birthday
+register-invalidRegist-noAllQuestion
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Input Text    birthday    01/04/1997
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-Question1Only
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-Question2Only
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question2"]    What is the first name of your best friend in high school?
+    Input Text    ans2    game tester
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-Question3Only
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-nameOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-SSNOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-ImageOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-EmailOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-usernameOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-passwordOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please input birthday
+    Wait until page contains    Please choose all three questions and answer
+register-invalidRegist-birthdayOnly
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Incorrect pattern
+    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please choose all three questions and answer

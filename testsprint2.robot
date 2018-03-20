@@ -13,6 +13,8 @@ ${valid_password}    letme1ntroducemyself
 openbrow
     Open Browser    ${url}    ${browser}
     Location should be    ${url}
+capjor
+    Capture Page Screenshot    filename=selenium-screenshot-{index}.png
 *** Test Cases ***
 OpenBrowserChrome
     openbrow
@@ -34,6 +36,7 @@ register-validRegist
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegist-thaiusername
@@ -54,6 +57,7 @@ register-validRegist-thaiusername
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.
@@ -74,6 +78,7 @@ register-validRegistUsingPassportNo.
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.-thaiusername
@@ -94,6 +99,7 @@ register-validRegistUsingPassportNo.-thaiusername
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegist-LongUsername
@@ -114,6 +120,7 @@ register-validRegist-LongUsername
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.-LongUsername
@@ -134,6 +141,7 @@ register-validRegistUsingPassportNo.-LongUsername
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegist-thaiusername-LongUsername
@@ -154,6 +162,7 @@ register-validRegist-thaiusername-LongUsername
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-validRegistUsingPassportNo.-thaiusername-LongUsername
@@ -174,6 +183,7 @@ register-validRegistUsingPassportNo.-thaiusername-LongUsername
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
+    capjor
     click button    Register
     Wait until Location should be    http://10.199.66.227/SoftEn2018/Sec01_BS/Register/correct_registration.html
 register-invalidRegist-allBlank
@@ -191,14 +201,21 @@ register-invalidRegist-allBlank
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your Birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-noPolicy
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -216,7 +233,8 @@ register-invalidRegist-noPolicy
     Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
     Input Text    ans3    kho chang
     click button    Register
-    Wait until page contains    Please accept the policy to sign up
+    Wait until page contains    Please accept policies
+    capjor
 register-invalidRegist-2-noPolicy
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -234,32 +252,47 @@ register-invalidRegist-2-noPolicy
     Select From List By Label    xpath=//select[@name="question3"]    What is the name of firth beach you visited?
     Input Text    ans3    kho chang
     click button    Register
-    Wait until page contains    Please accept the policy to sign up
+    Wait until page contains    Please accept policies
+    capjor
 register-invalidRegist-allEmpty-checkPolicy
     Go to ${url}
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your Birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 regsiter-invalidRegist-allEmpty-notCheckPolicy
     Go to ${url}
     Click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
-    Wait until page contains    Please accept the policy to sign up
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your Birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please accept policies
+    capjor
 register-invalidRegist-name-thaiName-1
     Go to    ${url}
     Input Text    name    ธนู แสไธสง
@@ -280,6 +313,7 @@ register-invalidRegist-name-thaiName-1
     Click button    ok
     click button    Register
     Wait until page contains    First and last name must be contains letters(Eng)
+    capjor
 register-invalidRegist-name-thaiName-2
     Go to    ${url}
     Input Text    name    ธนู แสไธสง
@@ -300,6 +334,7 @@ register-invalidRegist-name-thaiName-2
     Click button    ok
     click button    Register
     Wait until page contains    First and last name must be contains letters(Eng)
+    capjor
 register-invalidRegist-name-numberName-1
     Go to    ${url}
     Input Text    name    110111011 110111101
@@ -320,6 +355,7 @@ register-invalidRegist-name-numberName-1
     Click button    ok
     click button    Register
     Wait until page contains    First and last name must be contains letters(Eng)
+    capjor
 register-invalidRegist-name-numberName-2
     Go to    ${url}
     Input Text    name    110111011 110111101
@@ -340,6 +376,7 @@ register-invalidRegist-name-numberName-2
     Click button    ok
     click button    Register
     Wait until page contains    First and last name must be contains letters(Eng)
+    capjor
 register-invalidRegist-name-tripleSpaceName-1
     Go to    ${url}
     Input Text    name    thanu   Saethaisong
@@ -360,6 +397,7 @@ register-invalidRegist-name-tripleSpaceName-1
     Click button    ok
     click button    Register
     Wait until page contains    First and last name must be contains letters(Eng)
+    capjor
 register-invalidRegist-name-tripleSpaceName-2
     Go to    ${url}
     Input Text    name    thanu   Saethaisong
@@ -380,6 +418,7 @@ register-invalidRegist-name-tripleSpaceName-2
     Click button    ok
     click button    Register
     Wait until page contains    First and last name must be contains letters(Eng)
+    capjor
 register-invalidRegist-name-NoName-1
     Go to    ${url}
     Input Text    ssn    ${valid_ssn}
@@ -398,7 +437,8 @@ register-invalidRegist-name-NoName-1
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Please input your Fullname
+    capjor
 register-invalidRegist-name-NoName-2
     Go to    ${url}
     Input Text    ssn    ${valid_passportNo}
@@ -417,7 +457,8 @@ register-invalidRegist-name-NoName-2
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
+    Wait until page contains    Please input your Fullname
+    capjor
 register-invalidRegist-SSN-NoSSN
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -436,7 +477,8 @@ register-invalidRegist-SSN-NoSSN
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Incorrect pattern
+    Wait until page contains    Please input your Identification number/Passport number
+    capjor
 register-invalidRegist-SSN-SSNTooShort
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -457,6 +499,7 @@ register-invalidRegist-SSN-SSNTooShort
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-SSN-SSNTooLong
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -477,6 +520,7 @@ register-invalidRegist-SSN-SSNTooLong
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-SSn-SSNHaveMidLine
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -497,6 +541,7 @@ register-invalidRegist-SSn-SSNHaveMidLine
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-SSN-SSNInThai
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -517,6 +562,7 @@ register-invalidRegist-SSN-SSNInThai
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-SSN-SSNInEng
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -537,25 +583,7 @@ register-invalidRegist-SSN-SSNInEng
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
-register-invalidRegist-SSN-noSSN
-    Go to    ${url}
-    Input Text    name    ${valid_name}
-    Choose File    imgSSN    ${curdir}/tester.jpg
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    ${valid_username}
-    Input password    password    ${valid_password}
-    Input password    confirmpassword    ${valid_password}
-    Input Text    birthday    01/04/1997
-    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
-    Input Text    ans1    me. I mean myself, Really
-    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
-    Input Text    ans2    game tester
-    Select From List By Label    xpath=//select[@name="question3"]    What is the name of firth beach you visited?
-    Input Text    ans3    kho chang
-    click Checkbox    accept
-    Click button    ok
-    click button    Register
-    Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-Passport-passportInThai
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -576,6 +604,7 @@ register-invalidRegist-Passport-passportInThai
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-Passport-passportInEng
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -596,6 +625,7 @@ register-invalidRegist-Passport-passportInEng
     Click button    ok
     click button    Register
     Wait until page contains    Incorrect pattern
+    capjor
 register-invalidRegist-noImages
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -614,27 +644,8 @@ register-invalidRegist-noImages
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Image must be .png .jpg .jpeg format
-register-invalidRegist-notInputImages
-    Go to    ${url}
-    Input Text    name    ${valid_name}
-    Input Text    ssn    ${valid_ssn}
-    Choose File    imgSSN    ${curdir}/deanmv.mp4
-    Input Text    email    s.thanu@kkumail.com
-    Input Text    username    ${valid_username}
-    Input password    password    ${valid_password}
-    Input password    confirmpassword    ${valid_password}
-    Input Text    birthday    01/04/1997
-    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
-    Input Text    ans1    me. I mean myself, Really
-    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
-    Input Text    ans2    game tester
-    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
-    Input Text    ans3    kho chang
-    click Checkbox    accept
-    Click button    ok
-    click button    Register
-    Wait until page contains    Image must be .png .jpg .jpeg format
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    capjor
 register-invalidRegist-noEmail
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -653,7 +664,8 @@ register-invalidRegist-noEmail
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
+    Wait until page contains    Please input your Email
+    capjor
 register-invalidRegist-invalidPatternEmail-No@
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -674,6 +686,7 @@ register-invalidRegist-invalidPatternEmail-No@
     Click button    ok
     click button    Register
     Wait until page contains    Email must be @ ex.bananasoft@example.com
+    capjor
 register-invalidRegist-invalidPatternEmail-NoDomain
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -694,6 +707,7 @@ register-invalidRegist-invalidPatternEmail-NoDomain
     Click button    ok
     click button    Register
     Wait until page contains    Email must be @ ex.bananasoft@example.com
+    capjor
 register-invalidRegist-invalidPatternEmail-thaiEmail
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -714,6 +728,7 @@ register-invalidRegist-invalidPatternEmail-thaiEmail
     Click button    ok
     click button    Register
     Wait until page contains    Email must be @ ex.bananasoft@example.com
+    capjor
 register-invalidRegist-invalidPatternEmail-Blank
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -734,6 +749,7 @@ register-invalidRegist-invalidPatternEmail-Blank
     Click button    ok
     click button    Register
     Wait until page contains    Email must be @ ex.bananasoft@example.com
+    capjor
 register-invalidRegist-invalidPatternEmail-wrongAlphabet
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -754,6 +770,7 @@ register-invalidRegist-invalidPatternEmail-wrongAlphabet
     Click button    ok
     click button    Register
     Wait until page contains    Email must be @ ex.bananasoft@example.com
+    capjor
 register-invalidRegist-noUsername
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -772,7 +789,8 @@ register-invalidRegist-noUsername
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    Wait until page contains    Please input your Username
+    capjor
 register-invalidRegist-blankUsername
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -793,6 +811,7 @@ register-invalidRegist-blankUsername
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-longBlankUsername
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -813,6 +832,7 @@ register-invalidRegist-longBlankUsername
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-wrongUsername
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -833,6 +853,7 @@ register-invalidRegist-wrongUsername
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-LongUsername
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -853,6 +874,7 @@ register-invalidRegist-LongUsername
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-LongUsername-specialCharOnly
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -873,6 +895,7 @@ register-invalidRegist-LongUsername-specialCharOnly
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-LongUsername-specialCharOnly2
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -893,6 +916,7 @@ register-invalidRegist-LongUsername-specialCharOnly2
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-LongUsername-specialCharOnly3
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -913,6 +937,7 @@ register-invalidRegist-LongUsername-specialCharOnly3
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-LongUsername-thaiUsername
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -933,6 +958,7 @@ register-invalidRegist-LongUsername-thaiUsername
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-shortUsername-specialCharOnly
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -953,6 +979,7 @@ register-invalidRegist-shortUsername-specialCharOnly
     Click button    ok
     click button    Register
     Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
+    capjor
 register-invalidRegist-noPassword
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -970,7 +997,27 @@ register-invalidRegist-noPassword
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    Wait until page contains    Please input your Password
+    capjor
+register-invalidRegist-noConfirmPassword
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Input password    password    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please input your ConfirmPassword
 register-invalidRegist-longPassword
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -978,7 +1025,8 @@ register-invalidRegist-longPassword
     Choose File    imgSSN    ${curdir}/tester.jpg
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
-    Inuput password    password    BIGBIGBIGLBIGIBIGMsoItgonnabeLIkethIsIntextonLydonottooworryIMMaforgetItaxetuaLLy
+    Input password    password    BIGBIGBIGLBIGIBIGMsoItgonnabeLIkethIsIntextonLydonottooworryIMMaforgetItaxetuaLLy
+    Input password    confirmpassword    BIGBIGBIGLBIGIBIGMsoItgonnabeLIkethIsIntextonLydonottooworryIMMaforgetItaxetuaLLy
     Input Text    birthday    01/04/1997
     Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
     Input Text    ans1    me. I mean myself, Really
@@ -990,6 +1038,7 @@ register-invalidRegist-longPassword
     Click button    ok
     click button    Register
     Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    capjor
 register-invalidRegist-shortPassword
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -997,7 +1046,8 @@ register-invalidRegist-shortPassword
     Choose File    imgSSN    ${curdir}/tester.jpg
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
-    Inuput password    password    1122
+    Input password    password    1122
+    Input password    password    1122
     Input Text    birthday    01/04/1997
     Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
     Input Text    ans1    me. I mean myself, Really
@@ -1009,6 +1059,7 @@ register-invalidRegist-shortPassword
     Click button    ok
     click button    Register
     Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    capjor
 register-invalidRegist-shortWrongPasswordPattern
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -1016,7 +1067,8 @@ register-invalidRegist-shortWrongPasswordPattern
     Choose File    imgSSN    ${curdir}/tester.jpg
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
-    Inuput password    password    ************
+    Input password    password    ************
+    Input password    confirmpassword    ************
     Input Text    birthday    01/04/1997
     Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
     Input Text    ans1    me. I mean myself, Really
@@ -1028,6 +1080,7 @@ register-invalidRegist-shortWrongPasswordPattern
     Click button    ok
     click button    Register
     Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    capjor
 register-invalidRegist-longWrongPasswordPattern
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -1035,7 +1088,8 @@ register-invalidRegist-longWrongPasswordPattern
     Choose File    imgSSN    ${curdir}/tester.jpg
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
-    Inuput password    password    ****************************************************************************
+    Input password    password    ****************************************************************************
+    Input password    confirmpassword    ****************************************************************************
     Input Text    birthday    01/04/1997
     Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
     Input Text    ans1    me. I mean myself, Really
@@ -1047,6 +1101,7 @@ register-invalidRegist-longWrongPasswordPattern
     Click button    ok
     click button    Register
     Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
+    capjor
 register-invalidRegist-noBirthDay
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -1054,7 +1109,8 @@ register-invalidRegist-noBirthDay
     Choose File    imgSSN    ${curdir}/tester.jpg
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
-    Inuput password    password    ${valid_password}
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
     Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
     Input Text    ans1    me. I mean myself, Really
     Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
@@ -1064,7 +1120,8 @@ register-invalidRegist-noBirthDay
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please input birthday
+    Wait until page contains    Please input your Birthday
+    capjor
 register-invalidRegist-noAllQuestion
     Go to    ${url}
     Input Text    name    ${valid_name}
@@ -1072,13 +1129,40 @@ register-invalidRegist-noAllQuestion
     Choose File    imgSSN    ${curdir}/tester.jpg
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
-    Inuput password    password    ${valid_password}
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please choose all three questions and answer
-register-invalidRegist-Question1Only
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
+register-invalidRegist-noQuestion1Only
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Input password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please input your Answer
+    capjor
+register-invalidRegist-noQuestion2Only
     Go to    ${url}
     Input Text    name    ${valid_name}
     Input Text    ssn    ${valid_ssn}
@@ -1086,14 +1170,19 @@ register-invalidRegist-Question1Only
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
     Inuput password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
     Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
     Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
+    Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please choose all three questions and answer
-register-invalidRegist-Question2Only
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please input your Answer
+    capjor
+register-invalidRegist-noQuestion3Only
     Go to    ${url}
     Input Text    name    ${valid_name}
     Input Text    ssn    ${valid_ssn}
@@ -1101,14 +1190,19 @@ register-invalidRegist-Question2Only
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
     Inuput password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
-    Select From List By Label    xpath=//select[@name="question2"]    What is the first name of your best friend in high school?
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
     Input Text    ans2    game tester
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please choose all three questions and answer
-register-invalidRegist-Question3Only
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    capjor
+register-invalidRegist-noQuestion12
     Go to    ${url}
     Input Text    name    ${valid_name}
     Input Text    ssn    ${valid_ssn}
@@ -1116,101 +1210,196 @@ register-invalidRegist-Question3Only
     Input Text    email    s.thanu@kkumail.com
     Input Text    username    ${valid_username}
     Inuput password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
     Input Text    birthday    01/04/1997
     Select From List By Label    xpath=//select[@name="question3"]    What is the name of first beach you visited?
     Input Text    ans3    kho chang
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please input your Answer
+    capjor
+register-invalidRegist-noQuestion13
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question2"]    What is your dream job?
+    Input Text    ans2    game tester
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    capjor
+register-invalidRegist-noQuestion23
+    Go to    ${url}
+    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
+    Choose File    imgSSN    ${curdir}/tester.jpg
+    Input Text    email    s.thanu@kkumail.com
+    Input Text    username    ${valid_username}
+    Inuput password    password    ${valid_password}
+    Input password    confirmpassword    ${valid_password}
+    Input Text    birthday    01/04/1997
+    Select From List By Label    xpath=//select[@name="question1"]    What is the first name of your best friend in high school?
+    Input Text    ans1    me. I mean myself, Really
+    click Checkbox    accept
+    Click button    ok
+    click button    Register
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-nameOnly
     Go to    ${url}
     Input Text    name    ${valid_name}
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-SSNOnly
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    Input Text    ssn    ${valid_ssn}
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-ImageOnly
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    choose file    imgSSN    ${curdir}/tester.jpg
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-EmailOnly
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    Input Text    email    s.thanu@kkumail.com
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your Birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-usernameOnly
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    Input Text    username    ${valid_username}
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your Birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-passwordOnly
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    Input password    password    ${valid_password}
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please input birthday
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please input your Birthday
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor
 register-invalidRegist-birthdayOnly
     Go to    ${url}
-    Input Text    name    ${valid_name}
+    Input Text    birthday    01/04/2540
     click Checkbox    accept
     Click button    ok
     click button    Register
-    Wait until page contains    First and last name must be contains letters(Eng)
-    Wait until page contains    Incorrect pattern
-    Wait until page contains    Image must be .png .jpg .jpeg format
-    Wait until page contains    Email must be @ ex.bananasoft@example.com
-    Wait until page contains    Please type a username must be contains letters(Thai,Eng), numbers, - and _
-    Wait until page contains    Please type a password that's at least 16 characters long and which contains letters(Eng) or numbers or - or _
-    Wait until page contains    Please choose all three questions and answer
+    Wait until page contains    Please input your Fullname
+    Wait until page contains    Please input your Identification number/Passport number
+    Wait until page contains    Please choose your Image Identification number/Passport number to upload
+    Wait until page contains    Please input your Email
+    Wait until page contains    Please input your Username
+    Wait until page contains    Please input your Password
+    Wait until page contains    Please input your ConfirmPassword
+    Wait until page contains    Please select your question1
+    Wait until page contains    Please select your question2
+    Wait until page contains    Please select your question3
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    Wait until page contains    Please input your Answer
+    capjor

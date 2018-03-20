@@ -590,10 +590,6 @@ register-invalidRegist-nameAndSSN-Only
    Click button    ok
    click button    Register
    Wait until page contains    Incorrect pattern
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement ไม่ใส่ไฟล์รูป
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement ใส่ไฟล์อื่นนอกจากภาพ
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement ไม่ใส่อีเมล์
-ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement ใส่อีเมล์ผิดแบบ
 ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username ไม่ใส่
 ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username ช่องว่าง
 ลงทะเบียน-ใส่ข้อมูลไม่ตรงตาม requirement username อักขระพิเศษ
